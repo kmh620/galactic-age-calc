@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Galactic Age Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Galactic Age Calculator</h1>
+        <p>Input your age and gender to find out how old you would be across the solar system!</p>
+
+      </div>
+
+    <form id="input-form">
+      <select class="form-control" id="gender">
+        <option value="0"></option>
+        <option value="1">Female</option>
+        <option value="2">Male</option>
+      </select>
+
+      <div class="form-group">
+        <label for="age">Enter your age:</label>
+        <input type="text" id="age">
+      </div>
+       <br>
+       <button type="submit" name="button" class="button">Submit</button>
+    </form>
+
+    <div id="error"></div>
+
+    <div id="show-result">
+     <h4>Your Ages:</h4>
+     <h5>Earth</h5>
+       <label>Age:</label>
+       <div id="earth-age"></div>
+       <label>Expected Years Left:</label>
+       <div id="earth-exp"></div>
+     <h5>Mercury</h5>
+       <div id="mercury-age"></div>
+       <div id="mercury-exp"></div>
+     <h5>Venus</h5>
+       <div id="venus-age"></div>
+       <div id="venus-exp"></div>
+     <h5>Mars</h5>
+       <div id="mars-age"></div>
+       <div id="mars-exp"></div>
+     <h5>Jupiter</h5>
+       <div id="jupiter-age"></div>
+       <div id="jupiter-exp"></div>
+    </div>
+
+
+   </div>
+  </body>
+</html>

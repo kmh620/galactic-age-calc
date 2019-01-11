@@ -29,7 +29,7 @@ class Age {
   lifeExEarth() {
     let earthEx = 0;
 
-    if (this.gender === 'f') {
+    if (this.gender === 1) {
       earthEx += 81.6
     } else {
       earthEx += 76.9
@@ -41,20 +41,16 @@ class Age {
     let inputDate = this.date;
     let yearsLeft = this.lifeExEarth() - this.age;
     let deathDate = inputDate.getFullYear() + yearsLeft;
-    let yearsOver = yearsLeft * -1;
+    let yearsOver = Math.floor(yearsLeft * -1);
 
     if (yearsLeft === 0) {
       return "You will die this Year!";
     } else if (yearsLeft < 0){
-      return "You have lived ${yearsOver} your life expectancy!";
+      return `You have lived ${yearsOver} years past your life expectancy!`;
     } else {
-      return [Math.floor(yearsLeft), Math.floor(deathDate)];
+      return Math.floor(yearsLeft);
     }
   }
-
-  // var ages = timeLeftE();
-  // var yearstogo = ages[0];
-  // var deathyear = ages[1];
 
   timeLeftMer() {
     let inputDate = this.date;
@@ -62,11 +58,15 @@ class Age {
     let merEx = (lifeExpect / 0.24).toFixed(2);
     let yearsLeftMer =  merEx - this.ageConversionMercury();
     let deathDateMer = inputDate.getFullYear() + yearsLeftMer;
+    let yearsOverMer = Math.floor(yearsLeftMer * -1);
 
-    return [Math.floor(yearsLeftMer), Math.floor(deathDateMer)];
-    //223
-    //deathdateMer  if  on earth??=
-    //2242
+    if (yearsLeftMer === 0) {
+      return "You will die this Year!";
+    } else if (yearsLeftMer < 0){
+      return `You have lived ${yearsOverMer} years past your life expectancy!`;
+    } else {
+      return Math.floor(yearsLeftMer);
+    }
   }
 
   timeLeftV() {
@@ -75,9 +75,15 @@ class Age {
     let vEx = (lifeExpect / 0.62).toFixed(2);
     let yearsLeftV =  vEx - this.ageConversionVenus();
     let deathDateV = inputDate.getFullYear() + yearsLeftV;
+    let yearsOverV = Math.floor(yearsLeftV * -1);
 
-    return [Math.floor(yearsLeftV), Math.floor(deathDateV)];
-    //86, 2105
+    if (yearsLeftV === 0) {
+      return "You will die this Year!";
+    } else if (yearsLeftV < 0){
+      return `You have lived ${yearsOverV} years past your life expectancy!`;
+    } else {
+      return Math.floor(yearsLeftV);
+    }
   }
 
   timeLeftMa() {
@@ -86,8 +92,15 @@ class Age {
     let maEx = (lifeExpect / 1.88).toFixed(2);
     let yearsLeftMa =  maEx - this.ageConversionMars();
     let deathDateMa = inputDate.getFullYear() + yearsLeftMa;
-    return [Math.floor(yearsLeftMa), Math.floor(deathDateMa)];
-    //28, 2047
+    let yearsOverMa = Math.floor(yearsLeftMa * -1);
+
+    if (yearsLeftMa === 0) {
+      return "You will die this Year!";
+    } else if (yearsLeftMa < 0){
+      return `You have lived ${yearsOverMa} years past your life expectancy!`;
+    } else {
+      return Math.floor(yearsLeftMa);
+    }
   }
 
   timeLeftJ() {
@@ -96,11 +109,21 @@ class Age {
     let jEx = (lifeExpect / 11.86).toFixed(2);
     let yearsLeftJ =  jEx - this.ageConversionJupiter();
     let deathDateJ = inputDate.getFullYear() + yearsLeftJ;
-    return [Math.floor(yearsLeftJ), Math.floor(deathDateJ)];
-    //4, 2023
+    let yearsOverJ = Math.floor(yearsLeftJ * -1);
+
+    if (yearsLeftJ === 0) {
+      return "You will die this Year!";
+    } else if (yearsLeftJ < 0){
+      return `You have lived ${yearsOverJ} years past your life expectancy!`;
+    } else {
+      return Math.floor(yearsLeftJ);
+    }
   }
 
+  yearOfDeath(){
 
+
+  }
 
 
 }
