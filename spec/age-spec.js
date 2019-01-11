@@ -37,11 +37,11 @@ describe('Age', function() {
     let newAge = new Age(28, 'f');
     expect(newAge.lifeExEarth()).toEqual(81.6);
   });
-  //
-  // it('should calculate avg life expectancy for Mercury', function() {
-  //   let newAge = new Age(28, 'f');
-  //   expect(newAge.lifeEx()).toEqual(81.6);
-  // });
+
+  it('should calculate avg life expectancy for Mercury', function() {
+    let newAge = new Age(28, 'f');
+    expect(newAge.timeLeftMer()).toEqual(81.6);
+  });
   //
   // it('should calculate avg life expectancy for Venus', function() {
   //   let newAge = new Age(28, 'f');
@@ -60,7 +60,7 @@ describe('Age', function() {
 
   it('should return expected year of death on Earth', function() {
     let newAge = new Age(28, 'f');
-    expect(newAge.timeLeft()).toEqual(2072);
+    expect(newAge.timeLeftE()).toEqual(2072);
   });
 
 });

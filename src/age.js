@@ -36,43 +36,57 @@ class Age {
     }
     return earthEx;
   }
+
+  timeLeftE() {
+    let inputDate = this.date;
+    let yearsLeft = this.lifeExEarth() - this.age;
+    let deathDate = inputDate.getFullYear() + yearsLeft;
+
+    // time left for earth is deathDate, create option for all planets??
+    return Math.floor(deathDate);
+
+  }
+
+  timeLeftMer() {
+    let inputDate = this.date;
+    let lifeExpect = this.lifeExEarth();
+      //81.6
+
+      //how to do this??
+    let merEx = (this.lifeExpect).ageConversionMercury();
+    //340
+    //end how to do this??
+    
+    let yearsLeftMer =  merEx - this.ageConversionMercury();
+    //116.67
+
+    return Math.floor(yearsLeftMer);
+    //223
+    //deathdateMer  if  on earth??= inputDate.getFullYear()  + yearsLeftMer = 2242
+  }
   //
-  // lifeExMercury() {
-  //   let mercuryEx = ;
-  //
-  //   return mercuryEx;
-  // }
-  //
-  // lifeExVenus() {
+  // timeLeftV() {
   //   let venusEx = 0;
   //
   //
   //   return venusEx;
   // }
   //
-  // lifeExMars() {
+  // timeLeftMa() {
   //   let marsEx = 0;
   //
   //
   //   return marsEx;
   // }
   //
-  // lifeExJupiter() {
+  // timeLeftJ() {
   //   let jupiterEx = 0;
   //
   //
   //   return jupiterEx;
   // }
+  //
 
-  timeLeft() {
-    let inputDate = this.date;
-    let yearsLeft = this.lifeExEarth() - this.age;
-    let deathDate = inputDate.getFullYear() + yearsLeft;
-
-
-    return Math.floor(deathDate);
-
-  }
 
 
 
