@@ -48,44 +48,40 @@ class Age {
   }
 
   timeLeftMer() {
-    let inputDate = this.date;
+    //let inputDate = this.date;
     let lifeExpect = this.lifeExEarth();
-      //81.6
-
-      //how to do this??
-    let merEx = (this.lifeExpect).ageConversionMercury();
-    //340
-    //end how to do this??
-    
+    let merEx = (lifeExpect / 0.24).toFixed(2);
     let yearsLeftMer =  merEx - this.ageConversionMercury();
-    //116.67
 
     return Math.floor(yearsLeftMer);
     //223
     //deathdateMer  if  on earth??= inputDate.getFullYear()  + yearsLeftMer = 2242
   }
-  //
-  // timeLeftV() {
-  //   let venusEx = 0;
-  //
-  //
-  //   return venusEx;
-  // }
-  //
-  // timeLeftMa() {
-  //   let marsEx = 0;
-  //
-  //
-  //   return marsEx;
-  // }
-  //
-  // timeLeftJ() {
-  //   let jupiterEx = 0;
-  //
-  //
-  //   return jupiterEx;
-  // }
-  //
+
+  timeLeftV() {
+    //let inputDate = this.date;
+    let lifeExpect = this.lifeExEarth();
+    let vEx = (lifeExpect / 0.62).toFixed(2);
+    let yearsLeftV =  vEx - this.ageConversionVenus();
+
+    return Math.floor(yearsLeftV);
+    //86
+  }
+
+  timeLeftMa() {
+    let marsEx = 0;
+
+
+    return marsEx;
+  }
+
+  timeLeftJ() {
+    let jupiterEx = 0;
+
+
+    return jupiterEx;
+  }
+
 
 
 
