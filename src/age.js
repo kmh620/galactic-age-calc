@@ -43,48 +43,57 @@ class Age {
     let deathDate = inputDate.getFullYear() + yearsLeft;
 
     // time left for earth is deathDate, create option for all planets??
-    return Math.floor(deathDate);
-
+    // return Math.floor(deathDate);
+    return [Math.floor(yearsLeft), Math.floor(deathDate)];
   }
 
+  // var ages = timeLeftE();
+  // var yearstogo = ages[0];
+  // var deathyeart = ages[1];
+
   timeLeftMer() {
-    //let inputDate = this.date;
+    let inputDate = this.date;
     let lifeExpect = this.lifeExEarth();
     let merEx = (lifeExpect / 0.24).toFixed(2);
     let yearsLeftMer =  merEx - this.ageConversionMercury();
+    let deathDateMer = inputDate.getFullYear() + yearsLeftMer;
 
-    return Math.floor(yearsLeftMer);
+    return [Math.floor(yearsLeftMer), Math.floor(deathDateMer)];
     //223
-    //deathdateMer  if  on earth??= inputDate.getFullYear()  + yearsLeftMer = 2242
+    //deathdateMer  if  on earth??=
+    //2242
   }
 
   timeLeftV() {
-    //let inputDate = this.date;
+    let inputDate = this.date;
     let lifeExpect = this.lifeExEarth();
     let vEx = (lifeExpect / 0.62).toFixed(2);
     let yearsLeftV =  vEx - this.ageConversionVenus();
+    let deathDateV = inputDate.getFullYear() + yearsLeftV;
 
-    return Math.floor(yearsLeftV);
-    //86
+    return [Math.floor(yearsLeftV), Math.floor(deathDateV)];
+    //86, 2105
   }
 
   timeLeftMa() {
-    let marsEx = 0;
-
-
-    return marsEx;
+    let inputDate = this.date;
+    let lifeExpect = this.lifeExEarth();
+    let maEx = (lifeExpect / 1.88).toFixed(2);
+    let yearsLeftMa =  maEx - this.ageConversionMars();
+    let deathDateMa = inputDate.getFullYear() + yearsLeftMa;
+    return [Math.floor(yearsLeftMa), Math.floor(deathDateMa)];
+    //28, 2047
   }
 
   timeLeftJ() {
-    let jupiterEx = 0;
-
-
-    return jupiterEx;
+    let inputDate = this.date;
+    let lifeExpect = this.lifeExEarth();
+    let jEx = (lifeExpect / 11.86).toFixed(2);
+    let yearsLeftJ =  jEx - this.ageConversionJupiter();
+    let deathDateJ = inputDate.getFullYear() + yearsLeftJ;
+    return [Math.floor(yearsLeftJ), Math.floor(deathDateJ)];
+    //4, 2023
   }
-
-
-
-
 
 
 }

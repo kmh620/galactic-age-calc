@@ -38,29 +38,29 @@ describe('Age', function() {
     expect(newAge.lifeExEarth()).toEqual(81.6);
   });
 
-  it('should calculate avg life expectancy for Mercury', function() {
+  it('should return expected years left to live & year of death on Mercury', function() {
     let newAge = new Age(28, 'f');
-    expect(newAge.timeLeftMer()).toEqual(223);
+    expect(newAge.timeLeftMer()).toEqual([223, 2242]);
   });
 
-  it('should calculate avg life expectancy for Venus', function() {
+  it('should return expected years left to live & year of death on Venus', function() {
     let newAge = new Age(28, 'f');
-    expect(newAge.lifeEx()).toEqual(81.6);
+    expect(newAge.timeLeftV()).toEqual([86, 2105]);
   });
 
-  it('should calculate avg life expectancy for Mars', function() {
+  it('should return expected years left to live & year of death on Mars', function() {
     let newAge = new Age(28, 'f');
-    expect(newAge.lifeEx()).toEqual(81.6);
+    expect(newAge.timeLeftMa()).toEqual([28, 2047]);
   });
 
-  it('should calculate avg life expectancy for Jupiter', function() {
+  it('should return expected years left to live & year of death on Jupiter', function() {
     let newAge = new Age(28, 'f');
-    expect(newAge.lifeEx()).toEqual(81.6);
+    expect(newAge.timeLeftJ()).toEqual([4, 2023]);
   });
 
-  it('should return expected year of death on Earth', function() {
+  it('should return expected years left to live & year of death on Earth', function() {
     let newAge = new Age(28, 'f');
-    expect(newAge.timeLeftE()).toEqual(2072);
+    expect(newAge.timeLeftE()).toEqual([53,2072]);
   });
 
 });
