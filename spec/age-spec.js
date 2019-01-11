@@ -63,4 +63,14 @@ describe('Age', function() {
     expect(newAge.timeLeftE()).toEqual([53,2072]);
   });
 
+  it('should return  years user has surpassed life expectancy on Earth', function() {
+    let newAge = new Age(98, 'f');
+    expect(newAge.timeLeftE()).toEqual("You have lived ${yearsOver} your life expectancy!");
+  });
+
+  it('should return  message if they have no more years left', function() {
+    let newAge = new Age(81.6, 'f');
+    expect(newAge.timeLeftE()).toEqual("You will die this Year!");
+  });
+
 });

@@ -41,15 +41,20 @@ class Age {
     let inputDate = this.date;
     let yearsLeft = this.lifeExEarth() - this.age;
     let deathDate = inputDate.getFullYear() + yearsLeft;
+    let yearsOver = yearsLeft * -1;
 
-    // time left for earth is deathDate, create option for all planets??
-    // return Math.floor(deathDate);
-    return [Math.floor(yearsLeft), Math.floor(deathDate)];
+    if (yearsLeft === 0) {
+      return "You will die this Year!";
+    } else if (yearsLeft < 0){
+      return "You have lived ${yearsOver} your life expectancy!";
+    } else {
+      return [Math.floor(yearsLeft), Math.floor(deathDate)];
+    }
   }
 
   // var ages = timeLeftE();
   // var yearstogo = ages[0];
-  // var deathyeart = ages[1];
+  // var deathyear = ages[1];
 
   timeLeftMer() {
     let inputDate = this.date;
@@ -94,6 +99,8 @@ class Age {
     return [Math.floor(yearsLeftJ), Math.floor(deathDateJ)];
     //4, 2023
   }
+
+
 
 
 }
