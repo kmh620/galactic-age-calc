@@ -10,6 +10,15 @@
    -moz-border-radius: 70px;
    -webkit-border-radius: 70px;
    border-radius: 125px;
+   animation-name: earthColor;
+   animation-duration: 11s;
+   animation-iteration-count: infinite;
+}
+
+@keyframes earthColor {
+  0%   {background-color: #4b6f87;}
+  50%  {background-color: #496854;}
+  100% {background-color: #d6dbd8;}
 }
 
 #mercury {
@@ -19,6 +28,15 @@
    -moz-border-radius: 70px;
    -webkit-border-radius: 70px;
    border-radius: 70px;
+   animation-name: mercuryColor;
+   animation-duration: 10s;
+   animation-iteration-count: infinite;
+}
+@keyframes mercuryColor {
+  0%   {background-color: #838a8e;}
+  30%  {background-color: #e8e8e8;}
+  60%  {background-color: #535453;}
+  100% {background-color: #878787;}
 }
 
 #venus {
@@ -28,6 +46,16 @@
    -moz-border-radius: 70px;
    -webkit-border-radius: 70px;
    border-radius: 100px;
+   animation-name: venusColor;
+   animation-duration: 9s;
+   animation-iteration-count: infinite;
+}
+@keyframes venusColor {
+  0%   {background-color: #c17a28;}
+  25%  {background-color: #d8d8d4;}
+  50%  {background-color: #ccc9b7;}
+  75%  {background-color: #a39f8a;}
+  100% {background-color: #a58b66;}
 }
 
 #mars {
@@ -37,6 +65,15 @@
    -moz-border-radius: 70px;
    -webkit-border-radius: 70px;
    border-radius: 75px;
+   animation-name: marsColor;
+   animation-duration: 11s;
+   animation-iteration-count: infinite;
+}
+@keyframes marsColor {
+  0%   {background-color: #a85a3e;}
+  50%  {background-color: #7c4b33;}
+  75%  {background-color: #a32610;}
+  100% {background-color: #a85332;}
 }
 
 #jupiter {
