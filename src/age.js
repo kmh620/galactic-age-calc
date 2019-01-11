@@ -1,9 +1,8 @@
 
 class Age {
-  constructor(age, gender, country) {
+  constructor(age, gender) {
     this.age = age,
-    this.gender = gender,
-    this.country = country
+    this.gender = gender
   }
 
   ageConversionMercury() {
@@ -27,12 +26,15 @@ class Age {
   }
 
 
-
-
-  // lifeEx() {
-  //
-  //
-  // }
+  lifeEx() {
+    let earthEx = 0;
+    if (this.gender === 'f') {
+      earthEx += 81.6
+    } else {
+      earthEx += 76.9
+    }
+    return earthEx;
+  }
 
 
 }
