@@ -60,7 +60,7 @@ describe('Age', function() {
 
   it('should return expected year of death on Earth', function() {
     let newAge = new Age(28, 'f');
-    expect(newAge.timeLeft()).toEqual(81.6);
+    expect(newAge.timeLeft()).toEqual(2072);
   });
 
 });

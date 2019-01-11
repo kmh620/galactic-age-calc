@@ -66,11 +66,11 @@ class Age {
 
   timeLeft() {
     let inputDate = this.date;
-    let yearsLeft = (this.lifeExEarth() - this.age);
-    let deathDate = new Date(inputDate.getFullYear() + yearsLeft);
+    let yearsLeft = this.lifeExEarth() - this.age;
+    let deathDate = inputDate.getFullYear() + yearsLeft;
 
 
-    return deathDate;
+    return Math.floor(deathDate);
 
   }
 
