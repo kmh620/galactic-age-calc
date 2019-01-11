@@ -2,7 +2,8 @@
 class Age {
   constructor(age, gender) {
     this.age = age,
-    this.gender = gender
+    this.gender = gender,
+    this.date = new Date();
   }
 
   ageConversionMercury() {
@@ -25,9 +26,9 @@ class Age {
     return jupiterAge;
   }
 
-
-  lifeEx() {
+  lifeExEarth() {
     let earthEx = 0;
+
     if (this.gender === 'f') {
       earthEx += 81.6
     } else {
@@ -35,6 +36,45 @@ class Age {
     }
     return earthEx;
   }
+  //
+  // lifeExMercury() {
+  //   let mercuryEx = ;
+  //
+  //   return mercuryEx;
+  // }
+  //
+  // lifeExVenus() {
+  //   let venusEx = 0;
+  //
+  //
+  //   return venusEx;
+  // }
+  //
+  // lifeExMars() {
+  //   let marsEx = 0;
+  //
+  //
+  //   return marsEx;
+  // }
+  //
+  // lifeExJupiter() {
+  //   let jupiterEx = 0;
+  //
+  //
+  //   return jupiterEx;
+  // }
+
+  timeLeft() {
+    let inputDate = this.date;
+    let yearsLeft = (this.lifeExEarth() - this.age);
+    let deathDate = new Date(inputDate.getFullYear() + yearsLeft);
+
+
+    return deathDate;
+
+  }
+
+
 
 
 }

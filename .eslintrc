@@ -21,6 +21,7 @@
       "no-console": "warn",
       "no-debugger": "warn",
       "no-extra-semi": "warn",
-      "no-unused-vars": "warn"
+      "no-unused-vars": "warn",
+      "no-undef": "warn"
   }
 }
