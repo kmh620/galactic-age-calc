@@ -92,5 +92,4 @@ describe('Age', function() {
     let newAge = new Age(28, 1);
     expect(newAge.yearOfDeathJ()).toEqual(2023);
   });
-
 });

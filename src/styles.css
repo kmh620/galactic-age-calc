@@ -16,6 +16,7 @@
   font-size: 20px;
   font-style: oblique;
 }
+
 h5 {
   background: #38404c;
   width: 100px;
@@ -69,6 +70,7 @@ h5 {
    animation-duration: 9s;
    animation-iteration-count: infinite;
 }
+
 @keyframes venusColor {
   0%   {background-color: #c17a28;}
   25%  {background-color: #d8d8d4;}
@@ -88,6 +90,7 @@ h5 {
    animation-duration: 11s;
    animation-iteration-count: infinite;
 }
+
 @keyframes marsColor {
   0%   {background-color: #a85a3e;}
   50%  {background-color: #7c4b33;}
@@ -106,6 +109,7 @@ h5 {
    animation-duration: 10s;
    animation-iteration-count: infinite;
 }
+
 @keyframes jupiterColor {
   0%   {background-color: #d8d2d0;}
   25%  {background-color: #a30b0b;}

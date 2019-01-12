@@ -156,9 +156,6 @@ class Age {
     let deathDateJ = inputDate.getFullYear() + this.timeLeftJ();
     return deathDateJ;
   }
-
-
-
 }
 
 export { Age };
