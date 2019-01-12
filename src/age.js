@@ -47,7 +47,7 @@ class Age {
       return "You will die this Year!";
     } else if (yearsLeft < 0){
       return `You have lived ${yearsOver} years past your life expectancy!`;
-    } else {
+    } else if(yearsLeft > 0) {
       return Math.floor(yearsLeft);
     }
   }
@@ -120,10 +120,43 @@ class Age {
     }
   }
 
-  yearOfDeath(){
+  yearOfDeathE() {
+    let inputDate = this.date;
+    let yearsToGo = this.timeLeftE();
+    let deathDateE = inputDate.getFullYear() + this.timeLeftE();
 
-
+    //not working to fix year of death output
+    // if(yearsToGo.isInteger === false ) {
+    //   return "You should have already died...";
+    // } else {
+      return deathDateE;
+    //}
   }
+
+  yearOfDeathMer() {
+    let inputDate = this.date;
+    let deathDateMer = inputDate.getFullYear() + this.timeLeftMer();
+    return deathDateMer;
+  }
+
+  yearOfDeathV() {
+    let inputDate = this.date;
+    let deathDateV = inputDate.getFullYear() + this.timeLeftV();
+    return deathDateV;
+  }
+
+  yearOfDeathMa() {
+    let inputDate = this.date;
+    let deathDateMa = inputDate.getFullYear() + this.timeLeftMa();
+    return deathDateMa;
+  }
+
+  yearOfDeathJ() {
+    let inputDate = this.date;
+    let deathDateJ = inputDate.getFullYear() + this.timeLeftJ();
+    return deathDateJ;
+  }
+
 
 
 }

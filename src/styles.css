@@ -3,6 +3,25 @@
   display: none;
 }
 
+.planet {
+  margin: auto;
+  width: 400px;
+  height: 400px;
+  padding: 50px;
+  background: #040121;
+  color: white;
+}
+
+.planet label {
+  font-size: 20px;
+  font-style: oblique;
+}
+h5 {
+  background: #38404c;
+  width: 100px;
+  padding: 12px;
+}
+
 #earth {
    width: 250px;
    height: 250px;
